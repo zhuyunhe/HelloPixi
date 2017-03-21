@@ -30,8 +30,8 @@ Main.prototype.update = function() {
 Main.prototype.loadSpriteSheet = function () {
     var loader = PIXI.loader;
     loader.add('wall', './resources/wall.json');
-    loader.add('bg-mid', './resources/bg-mid.json');
-    loader.add('bg-far', './resources/bg-far.json');
+    loader.add('bg-mid', './resources/bg-mid.png');
+    loader.add('bg-far', './resources/bg-far.png');
     loader.once('complete', this.spriteSheetLoaded.bind(this));
     loader.load();
 };
@@ -41,14 +41,5 @@ Main.prototype.spriteSheetLoaded = function () {
 
     requestAnimationFrame(this.update.bind(this));
 
-    /*var slice1 = PIXI.Sprite.fromFrame('edge_01');
-    slice1.position.x = 32;
-    slice1.position.y = 64;
+};
 
-    this.stage.addChild(slice1);
-
-    var slice2 = PIXI.Sprite.fromFrame('decoration_03');
-    slice2.position.x = 128;
-    slice2.position.y = 64;
-    this.stage.addChild(slice2);*/
-}
