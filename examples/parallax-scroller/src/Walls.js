@@ -10,11 +10,12 @@ function Walls() {
 
     this.slices = [];
 
-    this.createTestWallSpan();
 
     this.viewportX = 0;
 
     this.viewportSliceX = 0;
+
+    this.removedSlicesCount = 0;    //从slices数组中移除了多少个元素
 }
 
 Walls.prototype = Object.create(PIXI.Container.prototype);
@@ -28,8 +29,9 @@ Walls.prototype.setViewportX = function (viewportX) {
     this.viewportX = this.checkViewportXBounds(viewportX);
 
     var prevViewportSliceX = this.viewportSliceX;
+    this.viewportSliceX = Math.floor(this.viewportX/WallSlice.WIDTH);
 
-    this.viewportSliceX = Math.floor(this.viewportSliceX/WallSlice.WIDTH);
+    this.removeOldSlices(prevViewportSliceX);
 
     this.addNewSlices();
 
@@ -108,14 +110,26 @@ Walls.prototype.addNewSlices = function () {
     }
 };
 
-Walls.prototype.createTestWallSpan = function () {
-    this.addSlice(SliceType.FRONT, 192);
-    this.addSlice(SliceType.WINDOW, 192);
-    this.addSlice(SliceType.DECORATION, 192);
-    this.addSlice(SliceType.WINDOW, 192);
-    this.addSlice(SliceType.DECORATION, 192);
-    this.addSlice(SliceType.WINDOW, 192);
-    this.addSlice(SliceType.DECORATION, 192);
-    this.addSlice(SliceType.WINDOW, 192);
-    this.addSlice(SliceType.BACK, 192);
+//回收滚动出视窗的slice
+Walls.prototype.removeOldSlices = function (prevViewportSliceX) {
+    //有多少个slice滚动出了viewport
+    var numOldSlices = this.viewportSliceX - prevViewportSliceX;
+
+
+    this.removedSlicesCount += numOldSlices;
+    // this.slices.shift();
+
+    // console.log(this.removedSlicesCount)
+    if (numOldSlices > Walls.VIEWPORT_NUM_SLICES) {
+        numOldSlices = Walls.VIEWPORT_NUM_SLICES;
+    }
+
+    for (var i = prevViewportSliceX; i < prevViewportSliceX + numOldSlices; i++) {
+        var slice = this.slices[i];
+        if (slice.sprite != null) {
+            this.returnWallSprite(slice.type, slice.sprite);
+            this.removeChild(slice.sprite);
+            slice.sprite = null;
+        }
+    }
 };
