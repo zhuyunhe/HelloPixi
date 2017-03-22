@@ -92,7 +92,9 @@ Walls.prototype.addNewSlices = function () {
          i < this.viewportSliceX + Walls.VIEWPORT_NUM_SLICES;
          i++, sliceIndex++)
     {
-        var slice = this.slices[i];
+        // var slice = this.slices[i];
+        var slice = this.slices[i-this.removedSlicesCount];
+        //slice过少时要加上一些
         if(slice.sprite == null && slice.type != SliceType.GAP){
 
             slice.sprite = this.borrowWallSprite(slice.type);
@@ -116,8 +118,7 @@ Walls.prototype.removeOldSlices = function (prevViewportSliceX) {
     var numOldSlices = this.viewportSliceX - prevViewportSliceX;
 
 
-    this.removedSlicesCount += numOldSlices;
-    // this.slices.shift();
+
 
     // console.log(this.removedSlicesCount)
     if (numOldSlices > Walls.VIEWPORT_NUM_SLICES) {
@@ -127,6 +128,12 @@ Walls.prototype.removeOldSlices = function (prevViewportSliceX) {
     for (var i = prevViewportSliceX; i < prevViewportSliceX + numOldSlices; i++) {
         var slice = this.slices[i];
         if (slice.sprite != null) {
+            this.removedSlicesCount++;
+            console.log(this.removedSlicesCount);
+
+            //测试
+            this.slices.shift();
+
             this.returnWallSprite(slice.type, slice.sprite);
             this.removeChild(slice.sprite);
             slice.sprite = null;
