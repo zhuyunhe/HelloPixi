@@ -72,8 +72,8 @@ Walls.prototype.returnWallSprite = function(sliceType, sliceSprite) {
 
 
 Walls.prototype.checkViewportXBounds = function(viewportX) {
-    var maxViewportX = (this.slices.length - Walls.VIEWPORT_NUM_SLICES) *
-        WallSlice.WIDTH;
+    //var maxViewportX = (this.slices.length - Walls.VIEWPORT_NUM_SLICES) * WallSlice.WIDTH;
+    var maxViewportX = (31-9) * WallSlice.WIDTH;
     if (viewportX < 0)
     {
         viewportX = 0;
@@ -92,12 +92,14 @@ Walls.prototype.addNewSlices = function () {
          i < this.viewportSliceX + Walls.VIEWPORT_NUM_SLICES;
          i++, sliceIndex++)
     {
-        // var slice = this.slices[i];
+        // console.log(this.viewportSliceX);
+        console.log('移除了%s个slice',this.removedSlicesCount);
         var slice = this.slices[i-this.removedSlicesCount];
         //slice过少时要加上一些
         if(slice.sprite == null && slice.type != SliceType.GAP){
 
             slice.sprite = this.borrowWallSprite(slice.type);
+            console.log('第一个slice的索引:%s',this.viewportSliceX);
 
             slice.sprite.position.x = firstX + (sliceIndex * WallSlice.WIDTH);
 
@@ -106,7 +108,7 @@ Walls.prototype.addNewSlices = function () {
             this.addChild(slice.sprite);
 
         } else if(slice.sprite != null){
-            slice.sprite.position.x = firstX + (sliceIndex * WallSlice.WIDTH);
+            //slice.sprite.position.x = firstX + (sliceIndex * WallSlice.WIDTH);
         }
 
     }
@@ -117,10 +119,6 @@ Walls.prototype.removeOldSlices = function (prevViewportSliceX) {
     //有多少个slice滚动出了viewport
     var numOldSlices = this.viewportSliceX - prevViewportSliceX;
 
-
-
-
-    // console.log(this.removedSlicesCount)
     if (numOldSlices > Walls.VIEWPORT_NUM_SLICES) {
         numOldSlices = Walls.VIEWPORT_NUM_SLICES;
     }
@@ -128,15 +126,13 @@ Walls.prototype.removeOldSlices = function (prevViewportSliceX) {
     for (var i = prevViewportSliceX; i < prevViewportSliceX + numOldSlices; i++) {
         var slice = this.slices[i];
         if (slice.sprite != null) {
-            this.removedSlicesCount++;
-            console.log(this.removedSlicesCount);
-
-            //测试
-            this.slices.shift();
 
             this.returnWallSprite(slice.type, slice.sprite);
             this.removeChild(slice.sprite);
             slice.sprite = null;
         }
+        //测试
+        this.removedSlicesCount++;
+        this.slices.shift();
     }
 };
