@@ -28,6 +28,7 @@ Walls.VIEWPORT_NUM_SLICES = Math.ceil(Walls.VIEWPORT_WIDTH/WallSlice.WIDTH) + 1;
 Walls.prototype.setViewportX = function (viewportX) {
     this.viewportX = this.checkViewportXBounds(viewportX);
 
+
     var prevViewportSliceX = this.viewportSliceX;
     this.viewportSliceX = Math.floor(this.viewportX/WallSlice.WIDTH);
 
@@ -73,8 +74,7 @@ Walls.prototype.returnWallSprite = function(sliceType, sliceSprite) {
 
 
 Walls.prototype.checkViewportXBounds = function(viewportX) {
-    var maxViewportX = (this.slices.length - Walls.VIEWPORT_NUM_SLICES) *
-        WallSlice.WIDTH;
+    var maxViewportX = (this.slices.length + this.removedSlicesCount - Walls.VIEWPORT_NUM_SLICES) * WallSlice.WIDTH;
     if (viewportX < 0)
     {
         viewportX = 0;
@@ -93,8 +93,8 @@ Walls.prototype.addNewSlices = function () {
          i < this.viewportSliceX + Walls.VIEWPORT_NUM_SLICES;
          i++, sliceIndex++)
     {
-        var slice = this.slices[i];
-        // var slice = this.slices[i-this.removedSlicesCount];
+
+        var slice = this.slices[i-this.removedSlicesCount];
         //slice过少时要加上一些
         if(slice.sprite == null && slice.type != SliceType.GAP){
 
@@ -120,31 +120,23 @@ Walls.prototype.removeOldSlices = function (prevViewportSliceX) {
     //有多少个slice滚动出了viewport
     var numOldSlices = this.viewportSliceX - prevViewportSliceX;
 
-
-
-
     if (numOldSlices > Walls.VIEWPORT_NUM_SLICES) {
         numOldSlices = Walls.VIEWPORT_NUM_SLICES;
     }
 
-    for (var j = prevViewportSliceX; j < prevViewportSliceX + numOldSlices; j++) {
-        var slice = this.slices[j];
-        console.log(slice);
 
-
-        this.removedSlicesCount++;
-
+    for (var i = prevViewportSliceX; i < prevViewportSliceX + numOldSlices; i++) {
+        var slice = this.slices[i-this.removedSlicesCount];
 
         if (slice.sprite != null) {
-            console.log('回收');
             this.returnWallSprite(slice.type, slice.sprite);
             this.removeChild(slice.sprite);
             slice.sprite = null;
         }
 
-        //测试
-        // this.slices.shift();
-        console.log('修改slices数组,移除数:%s,slices长度%s',this.removedSlicesCount,this.slices.length);
 
+        //测试
+        this.removedSlicesCount++;
+        this.slices.shift();
     }
 };
