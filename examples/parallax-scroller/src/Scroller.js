@@ -18,6 +18,10 @@ function Scroller(stage){
 
 Scroller.prototype.setViewportX = function (viewportX) {
     this.viewportX = viewportX;
+
+    if(this.front.slices.length < 20){
+        this.mapBuilder.createMap();
+    }
     this.far.setViewportX(viewportX);
     this.mid.setViewportX(viewportX);
     this.front.setViewportX(viewportX);

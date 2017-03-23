@@ -31,6 +31,7 @@ Walls.prototype.setViewportX = function (viewportX) {
     var prevViewportSliceX = this.viewportSliceX;
     this.viewportSliceX = Math.floor(this.viewportX/WallSlice.WIDTH);
 
+
     this.removeOldSlices(prevViewportSliceX);
 
     this.addNewSlices();
@@ -92,8 +93,8 @@ Walls.prototype.addNewSlices = function () {
          i < this.viewportSliceX + Walls.VIEWPORT_NUM_SLICES;
          i++, sliceIndex++)
     {
-        // var slice = this.slices[i];
-        var slice = this.slices[i-this.removedSlicesCount];
+        var slice = this.slices[i];
+        // var slice = this.slices[i-this.removedSlicesCount];
         //slice过少时要加上一些
         if(slice.sprite == null && slice.type != SliceType.GAP){
 
@@ -109,6 +110,8 @@ Walls.prototype.addNewSlices = function () {
             slice.sprite.position.x = firstX + (sliceIndex * WallSlice.WIDTH);
         }
 
+
+
     }
 };
 
@@ -120,23 +123,28 @@ Walls.prototype.removeOldSlices = function (prevViewportSliceX) {
 
 
 
-    // console.log(this.removedSlicesCount)
     if (numOldSlices > Walls.VIEWPORT_NUM_SLICES) {
         numOldSlices = Walls.VIEWPORT_NUM_SLICES;
     }
 
-    for (var i = prevViewportSliceX; i < prevViewportSliceX + numOldSlices; i++) {
-        var slice = this.slices[i];
+    for (var j = prevViewportSliceX; j < prevViewportSliceX + numOldSlices; j++) {
+        var slice = this.slices[j];
+        console.log(slice);
+
+
+        this.removedSlicesCount++;
+
+
         if (slice.sprite != null) {
-            this.removedSlicesCount++;
-            console.log(this.removedSlicesCount);
-
-            //测试
-            this.slices.shift();
-
+            console.log('回收');
             this.returnWallSprite(slice.type, slice.sprite);
             this.removeChild(slice.sprite);
             slice.sprite = null;
         }
+
+        //测试
+        // this.slices.shift();
+        console.log('修改slices数组,移除数:%s,slices长度%s',this.removedSlicesCount,this.slices.length);
+
     }
 };
