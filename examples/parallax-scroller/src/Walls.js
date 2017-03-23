@@ -28,6 +28,7 @@ Walls.VIEWPORT_NUM_SLICES = Math.ceil(Walls.VIEWPORT_WIDTH/WallSlice.WIDTH) + 1;
 Walls.prototype.setViewportX = function (viewportX) {
     this.viewportX = this.checkViewportXBounds(viewportX);
 
+
     var prevViewportSliceX = this.viewportSliceX;
     this.viewportSliceX = Math.floor(this.viewportX/WallSlice.WIDTH);
 
@@ -72,8 +73,7 @@ Walls.prototype.returnWallSprite = function(sliceType, sliceSprite) {
 
 
 Walls.prototype.checkViewportXBounds = function(viewportX) {
-    //var maxViewportX = (this.slices.length - Walls.VIEWPORT_NUM_SLICES) * WallSlice.WIDTH;
-    var maxViewportX = (31-9) * WallSlice.WIDTH;
+    var maxViewportX = (this.slices.length + this.removedSlicesCount - Walls.VIEWPORT_NUM_SLICES) * WallSlice.WIDTH;
     if (viewportX < 0)
     {
         viewportX = 0;
@@ -92,14 +92,11 @@ Walls.prototype.addNewSlices = function () {
          i < this.viewportSliceX + Walls.VIEWPORT_NUM_SLICES;
          i++, sliceIndex++)
     {
-        // console.log(this.viewportSliceX);
-        console.log('移除了%s个slice',this.removedSlicesCount);
         var slice = this.slices[i-this.removedSlicesCount];
         //slice过少时要加上一些
         if(slice.sprite == null && slice.type != SliceType.GAP){
 
             slice.sprite = this.borrowWallSprite(slice.type);
-            console.log('第一个slice的索引:%s',this.viewportSliceX);
 
             slice.sprite.position.x = firstX + (sliceIndex * WallSlice.WIDTH);
 
@@ -108,7 +105,7 @@ Walls.prototype.addNewSlices = function () {
             this.addChild(slice.sprite);
 
         } else if(slice.sprite != null){
-            //slice.sprite.position.x = firstX + (sliceIndex * WallSlice.WIDTH);
+            slice.sprite.position.x = firstX + (sliceIndex * WallSlice.WIDTH);
         }
 
     }
@@ -124,7 +121,7 @@ Walls.prototype.removeOldSlices = function (prevViewportSliceX) {
     }
 
     for (var i = prevViewportSliceX; i < prevViewportSliceX + numOldSlices; i++) {
-        var slice = this.slices[i];
+        var slice = this.slices[i-this.removedSlicesCount];
         if (slice.sprite != null) {
 
             this.returnWallSprite(slice.type, slice.sprite);

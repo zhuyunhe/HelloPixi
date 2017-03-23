@@ -20,6 +20,11 @@ Scroller.prototype.setViewportX = function (viewportX) {
     this.viewportX = viewportX;
     this.far.setViewportX(viewportX);
     this.mid.setViewportX(viewportX);
+
+    if(this.front.slices.length<10){
+        //可以引入随机,制造随机地图
+        this.mapBuilder.createMap();
+    }
     this.front.setViewportX(viewportX);
 };
 
