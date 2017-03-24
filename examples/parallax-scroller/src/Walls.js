@@ -16,6 +16,8 @@ function Walls() {
     this.viewportSliceX = 0;
 
     this.removedSlicesCount = 0;    //从slices数组中移除了多少个元素
+
+    this.firstSliceHeight = 0;      //第一个slice的高度
 }
 
 Walls.prototype = Object.create(PIXI.Container.prototype);
@@ -95,6 +97,9 @@ Walls.prototype.addNewSlices = function () {
     {
 
         var slice = this.slices[i-this.removedSlicesCount];
+        if(i === this.viewportSliceX+3){
+            this.firstSliceHeight = this.slices[i-this.removedSlicesCount].y;
+        }
         //slice过少时要加上一些
         if(slice.sprite == null && slice.type != SliceType.GAP){
 
