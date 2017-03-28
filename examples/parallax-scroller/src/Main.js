@@ -8,6 +8,24 @@ function Main(){
     var canvas_element = document.getElementById('game-canvas');
 
     this.stage = new Container();
+
+    //游戏准备舞台
+    this.gameReadyStage = new GameReadyStage();
+
+    //游戏主舞台
+    this.gamePlayStage = new GamePlayStage();
+    this.gamePlayStage.stage.visible = false;
+
+
+    //游戏结束舞台
+    this.gameOverStage = new GameOverStage();
+    this.gameOverStage.stage.visible = false;
+
+    this.stage.addChild(this.gameReadyStage.stage);
+    this.stage.addChild(this.gamePlayStage.stage);
+    this.stage.addChild(this.gameOverStage.stage);
+
+
     this.renderer = autoDetectRenderer(
                             canvas_element.width,
                             canvas_element.height,
@@ -16,36 +34,16 @@ function Main(){
                             }
     );
 
+
     this.stage.interactive = true;
-
-
-    this.scrollSpeed = Main.MIN_SCROLL_SPEED;
 
     this.loadSpriteSheet();
 }
 
-Main.MIN_SCROLL_SPEED = 5;
-Main.MAX_SCROLL_SPEED = 15;
-Main.SCROLL_ACCELERATION = 0.005;
-
-Main.prototype.update = function() {
-    this.scroller.moveViewportXBy(this.scrollSpeed);
-    this.scrollSpeed += Main.SCROLL_ACCELERATION;
-    if(this.scroller.front.firstSliceHeight){
-        // console.log(this.scroller.front.firstSliceHeight);
-        this.runner.pixie.y = this.scroller.front.firstSliceHeight + 20;
-    }else{
-        this.runner.pixie.state.setAnimation(0, 'jump', false);
-        this.runner.pixie.state.addAnimation(0,'running', true, 0);
-    }
-
-
-    if(this.scrollSpeed > Main.MAX_SCROLL_SPEED){
-        this.scrollSpeed = Main.MAX_SCROLL_SPEED;
-    }
-
+Main.prototype.play = function () {
+    this.gamePlayStage.play();
     this.renderer.render(this.stage);
-    requestAnimationFrame(this.update.bind(this));
+    requestAnimationFrame(this.play.bind(this));
 };
 
 Main.prototype.loadSpriteSheet = function () {
@@ -56,13 +54,21 @@ Main.prototype.loadSpriteSheet = function () {
     loader.add('pixie', './resources/Pixie.json');
     loader.once('complete', this.spriteSheetLoaded.bind(this));
     loader.load();
+
+    loader.on("progress",this.loadProgressHandler.bind(this));
+
 };
+
+//资源加载进度
+Main.prototype.loadProgressHandler = function (loader, resource) {
+    this.renderer.render(this.stage);
+    console.log('progress:%s%',loader.progress);
+}
 
 Main.prototype.spriteSheetLoaded = function (loader, resources) {
-
-    this.scroller = new Scroller(this.stage);
-
-    this.runner = new Runner(this.stage,resources.pixie.spineData);
-    this.update();
+    /*this.gameReadyStage.stage.visible = false;
+    this.gamePlayStage.stage.visible = true;*/
+    this.gamePlayStage.scroller = new Scroller(this.stage);
+    this.gamePlayStage.runner = new Runner(this.stage,resources.pixie.spineData);
+    this.play();
 };
-
