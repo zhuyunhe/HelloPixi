@@ -20,6 +20,7 @@ var Container = PIXI.Container,
 //renderer.view to the DOM
 var stage = new Container(),
     renderer = autoDetectRenderer(512, 512);
+console.log('stage.height:%s',stage.height);
 document.body.appendChild(renderer.view);
 
 loader
@@ -36,8 +37,10 @@ function setup() {
   //Make the game scene and add it to the stage
   gameScene = new Container();
   stage.addChild(gameScene);
+    console.log('stage.height:%s',stage.height);
 
-  //Make the sprites and add them to the `gameScene`
+
+    //Make the sprites and add them to the `gameScene`
   //Create an alias for the texture atlas frame ids
   id = resources["images/treasureHunter.json"].textures;
 
@@ -220,6 +223,7 @@ function gameLoop(){
 
   //Render the stage
   renderer.render(stage);
+
 }
 
 function play() {

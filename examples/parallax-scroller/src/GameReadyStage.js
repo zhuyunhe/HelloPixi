@@ -5,10 +5,14 @@ function GameReadyStage() {
 
     this.stage = new PIXI.Container();
 
-    var messgae = new PIXI.Text(
+    this.message = new PIXI.Text(
         "准备开始",
-        {font: "100px Future", fill: "white"}
+        {fontSize: "60px", fill: "white"}
     );
 
-    this.stage.addChild(messgae);
+    this.message.x = 60;
+    console.log('height:%s,width:%s',this.stage.height,this.stage.width);
+    // message.y = this.stage.height / 2 - 30;
+
+    this.stage.addChild(this.message);
 }

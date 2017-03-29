@@ -6,7 +6,7 @@ function GameOverStage() {
 
     var messgae = new PIXI.Text(
         "The End!",
-        {font: "64px Future", fill: "white"}
+        {fontSize: "64px", fill: "white"}
     );
 
     this.stage.addChild(messgae);
