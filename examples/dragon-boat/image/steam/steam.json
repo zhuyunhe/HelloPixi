@@ -1,0 +1,976 @@
+{
+  "frames": {
+    "fog_00000.png": {
+      "frame": {
+        "x": 2,
+        "y": 1008,
+        "w": 1,
+        "h": 1
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00001.png": {
+      "frame": {
+        "x": 2,
+        "y": 1008,
+        "w": 1,
+        "h": 1
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00002.png": {
+      "frame": {
+        "x": 80,
+        "y": 992,
+        "w": 28,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 119,
+        "y": 0,
+        "w": 28,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00003.png": {
+      "frame": {
+        "x": 210,
+        "y": 886,
+        "w": 40,
+        "h": 54
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 113,
+        "y": 0,
+        "w": 40,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00004.png": {
+      "frame": {
+        "x": 150,
+        "y": 886,
+        "w": 58,
+        "h": 82
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 103,
+        "y": 0,
+        "w": 58,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00005.png": {
+      "frame": {
+        "x": 80,
+        "y": 886,
+        "w": 68,
+        "h": 104
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 98,
+        "y": 0,
+        "w": 68,
+        "h": 104
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00006.png": {
+      "frame": {
+        "x": 2,
+        "y": 886,
+        "w": 76,
+        "h": 120
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 90,
+        "y": 0,
+        "w": 76,
+        "h": 120
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00007.png": {
+      "frame": {
+        "x": 630,
+        "y": 872,
+        "w": 84,
+        "h": 136
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 82,
+        "y": 0,
+        "w": 84,
+        "h": 136
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00008.png": {
+      "frame": {
+        "x": 888,
+        "y": 848,
+        "w": 94,
+        "h": 154
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 77,
+        "y": 0,
+        "w": 94,
+        "h": 154
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00009.png": {
+      "frame": {
+        "x": 782,
+        "y": 848,
+        "w": 104,
+        "h": 166
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 73,
+        "y": 0,
+        "w": 104,
+        "h": 166
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00010.png": {
+      "frame": {
+        "x": 1852,
+        "y": 2,
+        "w": 108,
+        "h": 178
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 72,
+        "y": 0,
+        "w": 108,
+        "h": 178
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00011.png": {
+      "frame": {
+        "x": 984,
+        "y": 820,
+        "w": 114,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 68,
+        "y": 0,
+        "w": 114,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00012.png": {
+      "frame": {
+        "x": 1722,
+        "y": 814,
+        "w": 118,
+        "h": 202
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 65,
+        "y": 0,
+        "w": 118,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00013.png": {
+      "frame": {
+        "x": 1600,
+        "y": 604,
+        "w": 120,
+        "h": 212
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 63,
+        "y": 0,
+        "w": 120,
+        "h": 212
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00014.png": {
+      "frame": {
+        "x": 1100,
+        "y": 792,
+        "w": 120,
+        "h": 222
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 62,
+        "y": 0,
+        "w": 120,
+        "h": 222
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00015.png": {
+      "frame": {
+        "x": 1724,
+        "y": 578,
+        "w": 122,
+        "h": 234
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 61,
+        "y": 0,
+        "w": 122,
+        "h": 234
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00016.png": {
+      "frame": {
+        "x": 1222,
+        "y": 762,
+        "w": 124,
+        "h": 248
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 0,
+        "w": 124,
+        "h": 248
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00017.png": {
+      "frame": {
+        "x": 1726,
+        "y": 2,
+        "w": 124,
+        "h": 262
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 0,
+        "w": 124,
+        "h": 262
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00018.png": {
+      "frame": {
+        "x": 1474,
+        "y": 724,
+        "w": 124,
+        "h": 274
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 0,
+        "w": 124,
+        "h": 274
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00019.png": {
+      "frame": {
+        "x": 1348,
+        "y": 724,
+        "w": 124,
+        "h": 286
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 0,
+        "w": 124,
+        "h": 286
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00020.png": {
+      "frame": {
+        "x": 1600,
+        "y": 2,
+        "w": 124,
+        "h": 296
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 0,
+        "w": 124,
+        "h": 296
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00021.png": {
+      "frame": {
+        "x": 1600,
+        "y": 300,
+        "w": 122,
+        "h": 302
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 0,
+        "w": 122,
+        "h": 302
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00022.png": {
+      "frame": {
+        "x": 1726,
+        "y": 266,
+        "w": 122,
+        "h": 310
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 0,
+        "w": 122,
+        "h": 310
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00023.png": {
+      "frame": {
+        "x": 1848,
+        "y": 598,
+        "w": 120,
+        "h": 320
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 0,
+        "w": 120,
+        "h": 320
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00024.png": {
+      "frame": {
+        "x": 1850,
+        "y": 266,
+        "w": 118,
+        "h": 330
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 61,
+        "y": 0,
+        "w": 118,
+        "h": 330
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00025.png": {
+      "frame": {
+        "x": 1478,
+        "y": 2,
+        "w": 120,
+        "h": 338
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 0,
+        "w": 120,
+        "h": 338
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00026.png": {
+      "frame": {
+        "x": 1476,
+        "y": 368,
+        "w": 122,
+        "h": 346
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 0,
+        "w": 122,
+        "h": 346
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00027.png": {
+      "frame": {
+        "x": 1348,
+        "y": 368,
+        "w": 126,
+        "h": 354
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 54,
+        "y": 0,
+        "w": 126,
+        "h": 354
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00028.png": {
+      "frame": {
+        "x": 1348,
+        "y": 2,
+        "w": 128,
+        "h": 364
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 0,
+        "w": 128,
+        "h": 364
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00029.png": {
+      "frame": {
+        "x": 1216,
+        "y": 386,
+        "w": 130,
+        "h": 374
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 0,
+        "w": 130,
+        "h": 374
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00030.png": {
+      "frame": {
+        "x": 1210,
+        "y": 2,
+        "w": 136,
+        "h": 382
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 0,
+        "w": 136,
+        "h": 382
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00031.png": {
+      "frame": {
+        "x": 1076,
+        "y": 400,
+        "w": 138,
+        "h": 390
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 0,
+        "w": 138,
+        "h": 390
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00032.png": {
+      "frame": {
+        "x": 1068,
+        "y": 2,
+        "w": 140,
+        "h": 396
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 0,
+        "w": 140,
+        "h": 396
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00033.png": {
+      "frame": {
+        "x": 930,
+        "y": 414,
+        "w": 144,
+        "h": 404
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 0,
+        "w": 144,
+        "h": 404
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00034.png": {
+      "frame": {
+        "x": 924,
+        "y": 2,
+        "w": 142,
+        "h": 410
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 0,
+        "w": 142,
+        "h": 410
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00035.png": {
+      "frame": {
+        "x": 782,
+        "y": 428,
+        "w": 146,
+        "h": 418
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 0,
+        "w": 146,
+        "h": 418
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00036.png": {
+      "frame": {
+        "x": 774,
+        "y": 2,
+        "w": 148,
+        "h": 424
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 33,
+        "y": 0,
+        "w": 148,
+        "h": 424
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00037.png": {
+      "frame": {
+        "x": 630,
+        "y": 440,
+        "w": 150,
+        "h": 430
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 0,
+        "w": 150,
+        "h": 430
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00038.png": {
+      "frame": {
+        "x": 620,
+        "y": 2,
+        "w": 152,
+        "h": 436
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 28,
+        "y": 0,
+        "w": 152,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00039.png": {
+      "frame": {
+        "x": 474,
+        "y": 444,
+        "w": 154,
+        "h": 440
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 0,
+        "w": 154,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00040.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 158,
+        "h": 440
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 0,
+        "w": 158,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00041.png": {
+      "frame": {
+        "x": 162,
+        "y": 2,
+        "w": 156,
+        "h": 440
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 0,
+        "w": 156,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00042.png": {
+      "frame": {
+        "x": 320,
+        "y": 2,
+        "w": 154,
+        "h": 440
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 0,
+        "w": 154,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00043.png": {
+      "frame": {
+        "x": 318,
+        "y": 444,
+        "w": 154,
+        "h": 440
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 0,
+        "w": 154,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00044.png": {
+      "frame": {
+        "x": 160,
+        "y": 444,
+        "w": 156,
+        "h": 440
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 0,
+        "w": 156,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00045.png": {
+      "frame": {
+        "x": 2,
+        "y": 444,
+        "w": 156,
+        "h": 440
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 0,
+        "w": 156,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00046.png": {
+      "frame": {
+        "x": 476,
+        "y": 2,
+        "w": 142,
+        "h": 440
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 0,
+        "w": 142,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    },
+    "fog_00047.png": {
+      "frame": {
+        "x": 2,
+        "y": 1008,
+        "w": 1,
+        "h": 1
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 444
+      }
+    }
+  },
+  "meta": {
+    "app": "http://www.codeandweb.com/texturepacker ",
+    "version": "1.0",
+    "image": "steam.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1970,
+      "h": 1021
+    },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:33985c75814a93a4e2abf8efe0870fb3:b1f716c37d894f43638d9986f3deffb6:9db9322e588b7b0347b1a8fca99c191e$"
+  }
+}

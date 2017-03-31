@@ -29,13 +29,16 @@ function Main(){
     this.stage.addChild(this.gamePlayStage.stage);
     this.stage.addChild(this.gameOverStage.stage);
 
-    scaleToWindow(canvas_element);
+    // scaleToWindow(canvas_element);
 
     this.renderer = autoDetectRenderer(
                             canvas_element.width,
                             canvas_element.height,
                             {
-                                view: canvas_element
+                                view: canvas_element,
+                                transparent: true,
+                                autoResize: true,
+                                resolution: 1
                             }
     );
 
